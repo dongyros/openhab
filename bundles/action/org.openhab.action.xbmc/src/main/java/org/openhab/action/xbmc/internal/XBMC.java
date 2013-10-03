@@ -84,7 +84,7 @@ public class XBMC {
 		content.append("{\"id\":1,\"jsonrpc\":\"2.0\",\"method\":\"GUI.ShowNotification\",\"params\":{\"title\":\"" + title + "\",\"message\":\"" + message+"\"");
 		if (StringUtils.isNotEmpty(image))
 			content.append(",\"image\":\"" + image + "\"");
-		if (displayTime > 0)
+		if (displayTime >= 1500 && displayTime <=2147483647)
 			content.append(",\"displaytime\":" + displayTime);
 		content.append("}}");
         
